@@ -15,25 +15,20 @@ public class BinarySearch
 			{
 			Scanner userInput = new Scanner(System.in);
 			num = userInput.nextInt();
+			elem.add(num);
 			if(num == -1)
 				{
-				
+				for(Object x : elem)
+					{
+					System.out.println(x);
+					}
 				}
-			for(Object x : elem)
-				{
-				System.out.println(x);
-				}
+			Collections.sort(elem);
 			}
 		while(playing);
 		}
-	
-	
-	
-	
-	
 	public static int BinarySearch(int[] elements, int target)
 		{
-		Collections.sort(elements);
 		int left = 0;
 		int right = elements.length - 1;
 		while (left <= right)
