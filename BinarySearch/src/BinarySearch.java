@@ -28,9 +28,13 @@ public class BinarySearch
 			Scanner userInput = new Scanner(System.in);
 			num = userInput.nextInt();
 			elem.add(num);
+			if(num == 0 || num >= 21 || num < -1)
+				{
+				System.out.println("Not a valid number.");
+				}
 			if(num == -1)
 				{
-				elem.remove(elem.size()-1);
+				elem.remove(elem.size() -1);
 				Collections.sort(elem);
 				for(Object x : elem)
 					{
